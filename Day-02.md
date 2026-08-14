@@ -1,4 +1,4 @@
-# Dockerfile Guide
+# What is Dockerfile?
 
 A practical guide to understanding Dockerfiles — what they are, how each instruction works, why they matter, and how to use them well in production.
 
