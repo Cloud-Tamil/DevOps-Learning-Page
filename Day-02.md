@@ -414,7 +414,7 @@ If an attacker manages to exploit the application, they don't automatically get 
 
 ### ⑤ Health check
 
-We expose `/health`, and Docker checks `http://localhost:3000/health`.
+We expose `/health`, and Docker checks `http://localhost:3001/health`.
 
 This is particularly useful with orchestration platforms:
 
