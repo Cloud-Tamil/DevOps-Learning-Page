@@ -461,9 +461,9 @@ Run it:
 ```bash
 docker run -d \
   --name shopsphere-api \
-  -p 3000:3000 \
+  -p 3001:30001 \
   -e NODE_ENV=production \
-  -e PORT=3000 \
+  -e PORT=3001 \
   shopsphere-api:1.0
 ```
 
