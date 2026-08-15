@@ -553,4 +553,3 @@ This is much closer to the kind of architecture you'd explain in a 3–6 year De
 
 > "For development, I can use a simple Dockerfile with a Node.js Alpine image, copy the package files, install dependencies, copy the source code, expose the port, and start the application. For production, I prefer a multi-stage build, `npm ci`, production-only dependencies, a non-root user, health checks, environment variables, proper signal handling, and a minimal final image. I then push the image to ECR and deploy it to EKS using Kubernetes manifests or Helm."
 
-If you want to practice this as a real production application, the next logical version is **Node.js + PostgreSQL + Redis + Docker Compose + Nginx + Kubernetes + Terraform + GitHub Actions**, which would closely match a ShopSphere-style architecture.
