@@ -1,11 +1,11 @@
 # Dockerfile Examples: Simple vs Production-Ready Node.js
 
-A walkthrough of two Node.js Dockerfiles — a simple one for learning/development, and an advanced, production-style multi-stage build — with an explanation of why the advanced version is better for real-world deployments.
+A walkthrough of two Node.js Dockerfiles - a simple one for learning/development, and an advanced, production-style multi-stage build — with an explanation of why the advanced version is better for real-world deployments.
 
 ## Table of Contents
 
-- [1. Simple Dockerfile — Node.js Application](#1-simple-dockerfile--nodejs-application)
-- [2. Advanced Application — Production-Style Node.js API](#2-advanced-application--production-style-nodejs-api)
+- [1. Simple Dockerfile - Node.js Application](#1-simple-dockerfile--nodejs-application)
+- [2. Advanced Application - Production-Style Node.js API](#2-advanced-application--production-style-nodejs-api)
 - [3. .dockerignore](#3-dockerignore)
 - [4. Advanced Multi-Stage Dockerfile](#4-advanced-multi-stage-dockerfile)
 - [5. Why Is This Dockerfile Better?](#5-why-is-this-dockerfile-better)
