@@ -1,55 +1,4 @@
-# Docker Day 1 — Complete Beginner-to-Hands-On Guide
-  - Today, we'll learn Docker from zero, like a real Cloud & DevOps Engineer. We'll cover the concepts, commands, hands-on labs, a mini-project, troubleshooting, and interview questions.
-  - Since you're learning practical DevOps tools, we'll focus on commands you can actually run in a terminal, including Google Cloud Shell.
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/b88877e1-87a6-44b8-9ed4-4e3599441588" />
-
-# 1. What is Docker?
-  -  Docker is a platform for building, packaging, shipping and running applications in containers.
-  -  Imagine you develop an application on your laptop. It works perfectly, but when you deploy it to a server, it fails because the server has different software versions or missing dependencies.
-  -  Docker helps solve this problem by packaging the application and its required dependencies into a consistent environment.
-
-        - For example, a web application might need:
-        - Python 3.12
-        - Required Python libraries
-        - Application source code
-        - Configuration settings
-        - A web server
-  - You can package these into a Docker image and run that image on different supported environments.
-## Why do DevOps engineers use Docker?
-- Consistent development, testing, and production environments.
-- Faster application deployment.
-- Isolation between applications.
-- Easier CI/CD automation.
-- Convenient scaling and replacement of application instances.
-- A foundation for container orchestration with Kubernetes.
-  
-**Important: Docker improves consistency, but it doesn't guarantee that every application will run identically everywhere. CPU architecture, kernel capabilities, permissions, networking, secrets, and configuration can still matter.**
-
-# 2. Virtual machines vs. Docker containers.
-
-**Virtual machines (VMs)**
-  - Each VM normally includes its own guest operating system on virtualized hardware. This can provide a strong isolation boundary but generally uses more resources.
-    
-**Docker containers**
-  - Containers isolate applications and their processes while sharing the host kernel. They are usually lighter and faster to start than full VMs.
-
-# 3. Understand the Docker architecture.
-- **Docker CLI:** The command-line client you use.
-- **Docker daemon (dockerd):** A background service that manages Docker objects.
-- **Docker image:** A read-only template used to create containers.
-- **Docker container:** An isolated runtime instance created from an image.
-- **Registry:** A service that stores and distributes images, such as Docker Hub or a private registry.
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e89992b8-1c12-4002-9b81-49239f27408e" />
-
-# 4. Install and verify Docker.
-- You can use Docker on a local Linux machine, Docker Desktop, or a suitable cloud environment.
-  
- **How to interpret the results:**
-- [**docker --version**] — confirms that the Docker CLI is installed.
-- [**docker compose version**] — confirms that the Compose plugin is available.
-- [**docker info**] — checks whether the CLI can communicate with the Docker daemon.
-
-# 🐳 Docker Day 1 — Complete Beginner-to-Hands-On Guide
+# 🐳 Docker Day 1 - Complete Beginner-to-Hands-On Guide
 
 A practical, command-first introduction to Docker for aspiring Cloud & DevOps Engineers. This guide covers concepts, hands-on labs, a Compose mini-project, troubleshooting, best practices, and a self-quiz.
 
@@ -159,6 +108,7 @@ Learn these terms first:
 
 Modern Docker Engine installations may also use `containerd` and additional runtime components behind the scenes.
 
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/e89992b8-1c12-4002-9b81-49239f27408e" />
 ---
 
 ## 4. Install and Verify Docker
