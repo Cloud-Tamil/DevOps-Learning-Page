@@ -40,6 +40,10 @@
 ## 1. What is Docker?
 
 **Docker** is an open-source containerization platform used for **building, packaging, shipping, and running applications inside isolated environments called containers**.
+- Docker is an isolated container environment and where it's providing shared infrastructure for across all the containers.
+- Docker is a containerization platform that allow us to packages an application along with it's dependencies into a container.
+- Docker has an own libraries, Runtime, Application, Dependencies and Configuration.
+- Docker has a lightweight so it's salable and portable.
 
 ### The Classic Problem
 > *"It works on my machine!"*  
