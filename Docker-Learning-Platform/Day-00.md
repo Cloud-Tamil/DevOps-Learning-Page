@@ -330,8 +330,8 @@ We'll create a small static website — no programming language needed.
 **Step 1 — Create a project directory**
 
 ```bash
-mkdir -p ~/docker-day1/my-web
-cd ~/docker-day1/my-web
+mkdir -p ~/Docker/my-web
+cd ~/Docker/my-web
 ```
 
 **Step 2 — Create an HTML page**
@@ -485,15 +485,15 @@ Test the second one at `http://localhost:9090` on the Docker host.
 ### Lab 4 — Create a Docker network
 
 ```bash
-docker network create day1-network
+docker network create my-network
 
 docker run -d \
   --name web-a \
-  --network day1-network \
+  --network my-network \
   nginx:alpine
 
 docker run --rm \
-  --network day1-network \
+  --network my-network \
   busybox:1.36 \
   wget -qO- http://web-a
 ```
@@ -511,7 +511,7 @@ Clean up:
 
 ```bash
 docker rm -f web-a
-docker network rm day1-network
+docker network rm my-network
 ```
 
 ---
@@ -523,10 +523,10 @@ A container's writable layer is **not** a reliable place for important data. If 
 ### Lab 5 — Save data using a volume
 
 ```bash
-docker volume create day1-data
+docker volume create my-data
 
 docker run --rm \
-  --mount source=day1-data,target=/data \
+  --mount source=my-data,target=/data \
   busybox:1.36 \
   sh -c 'echo "Docker persistence works" > /data/message.txt'
 ```
@@ -535,7 +535,7 @@ Now read it from a **new** container using the same volume:
 
 ```bash
 docker run --rm \
-  --mount source=day1-data,target=/data \
+  --mount source=my-data,target=/data \
   busybox:1.36 \
   cat /data/message.txt
 ```
@@ -549,13 +549,13 @@ Docker persistence works
 The first container was removed, yet the data remains in the volume.
 
 ```bash
-docker volume inspect day1-data
+docker volume inspect my-data
 ```
 
 When finished practising (only if you no longer need the data):
 
 ```bash
-docker volume rm day1-data
+docker volume rm my-data
 ```
 
 > **Bind mounts** connect a specific host directory to a container directory. They're useful for local development and sharing config or source files. Volumes are often a better default for application data managed by Docker.
@@ -569,8 +569,8 @@ Docker Compose lets you define and manage multiple services using YAML. Instead 
 ### Lab 6 — Build a small Compose project
 
 ```bash
-mkdir -p ~/docker-day1/compose-demo
-cd ~/docker-day1/compose-demo
+mkdir -p ~/Docker1/compose-demo
+cd ~/Docker1/compose-demo
 ```
 
 **`index.html`**
@@ -661,7 +661,7 @@ Conflict. The container name is already in use.
 
 ```bash
 docker ps -a
-docker rm -f day1-nginx
+docker rm -f my-nginx
 ```
 
 Only remove the old container if you no longer need it.
